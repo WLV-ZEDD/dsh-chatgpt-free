@@ -1,6 +1,6 @@
 {
   "name": "@wlv-zedd/dsh-chatgpt-free",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "DeepSeek Harness Cordis plugin for free ChatGPT Web (GPT 5.6 Luna) pure chat and zero API fees.",
   "repository": {
     "type": "git",

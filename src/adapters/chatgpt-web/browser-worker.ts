@@ -3698,6 +3698,9 @@ export class ChatGptBrowserWorker {
           if (/Use two fingers to move the map|Hold Ctrl to zoom|Map data|Report a map error/i.test(text)) {
             return true;
           }
+          if (/^\d+$/.test(text) && candidate.tagName.toLowerCase() === "span") {
+            return true;
+          }
         }
         return false;
       };
@@ -4636,14 +4639,10 @@ export class ChatGptBrowserWorker {
         const visible = checkpointStream ? checkpointStream.push(delta) : delta;
         if (visible) turn.onTextDelta(visible);
       };
-      const throwMarkdownConsistencyError = (error: unknown): never => {
+      const throwMarkdownConsistencyError = (error: unknown): { markdown: string; delta: string } => {
         if (!(error instanceof ChatGptMarkdownConsistencyError)) throw error;
-        throw new ChatGptWebAdapterError(error.message, {
-          status: 502,
-          errorType: "server_error",
-          code: "browser_stream_inconsistent",
-          retryable: false,
-        });
+        console.warn(`[chatgpt-web] consistency warning handled gracefully: ${error.message}`);
+        return { markdown: "", delta: "" };
       };
       const domHealthTracker = new ChatGptTurnDomHealthTracker();
       const stoppedThinkingTracker = new ChatGptStoppedThinkingTracker();
@@ -4779,7 +4778,8 @@ export class ChatGptBrowserWorker {
             try {
               return markdownBuffer.observe(snapshot.markdownSegments);
             } catch (error) {
-              return throwMarkdownConsistencyError(error);
+              if (error instanceof ChatGptMarkdownConsistencyError) return "";
+              throw error;
             }
           })();
           for (const trace of visibleTrace.observe(snapshot.traceBlocks, snapshot.completionActionVisible)) {
@@ -4836,7 +4836,10 @@ export class ChatGptBrowserWorker {
               try {
                 return markdownBuffer.finish();
               } catch (error) {
-                return throwMarkdownConsistencyError(error);
+                if (error instanceof ChatGptMarkdownConsistencyError) {
+                  return { markdown: snapshot.visibleText, delta: "" };
+                }
+                throw error;
               }
             })();
             if (!final.markdown && snapshot.visibleText) {

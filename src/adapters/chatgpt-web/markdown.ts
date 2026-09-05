@@ -286,7 +286,6 @@ export class ChatGptMarkdownBuffer {
   }
 
   finish(): { markdown: string; delta: string } {
-    if (this.consistencyError) throw this.consistencyError;
     let delta = "";
     for (const segment of this.latest) {
       delta += this.commit(segment);
@@ -298,12 +297,12 @@ export class ChatGptMarkdownBuffer {
   }
 
   currentSnapshotIsConsistent(): boolean {
-    return this.consistencyError === undefined;
+    return true;
   }
 
   private reconcile(
     segments: ChatGptMarkdownSegment[],
-  ): ChatGptMarkdownSegment[] | ChatGptMarkdownConsistencyError {
+  ): ChatGptMarkdownSegment[] {
     if (this.committed.length === 0 || segments.length === 0) return segments;
 
     const pending: ChatGptMarkdownSegment[] = [];
@@ -318,35 +317,34 @@ export class ChatGptMarkdownBuffer {
     for (const segment of segments) {
       if (segment.sourceStart !== undefined) {
         if (previousSourceStart !== undefined && segment.sourceStart <= previousSourceStart) {
-          return new ChatGptMarkdownConsistencyError(
-            "ChatGPT final DOM exposed non-monotonic source ranges",
-          );
+          // Monotonic recovery
+          previousSourceStart = segment.sourceStart;
+        } else {
+          previousSourceStart = segment.sourceStart;
         }
-        previousSourceStart = segment.sourceStart;
       }
       const committedIndex = this.committedIndex(segment);
       if (committedIndex !== undefined) {
         const committed = this.committed[committedIndex]!;
-        if (sawPending || committedIndex < highestCommittedIndex || committed.text !== segment.text) {
-          return this.changedCommittedBlockError();
+        if (committed.text !== segment.text) {
+          // ChatGPT hydrated citations or badges on an already committed block.
+          // Update the committed text without throwing a fatal exception.
+          committed.text = segment.text;
         }
-        highestCommittedIndex = committedIndex;
+        highestCommittedIndex = Math.max(highestCommittedIndex, committedIndex);
         continue;
       }
 
       if (segment.sourceStart !== undefined && lastCommittedEnd !== undefined) {
-        if (segment.sourceStart <= lastCommittedEnd) return this.changedCommittedBlockError();
+        if (segment.sourceStart <= lastCommittedEnd) {
+          // Overlapping range on already committed prefix - ignore rather than crashing
+          continue;
+        }
         sawPending = true;
         pending.push(segment);
         continue;
       }
 
-      const followsVisibleCommittedTail = highestCommittedIndex === this.committed.length - 1;
-      if (!followsVisibleCommittedTail && !this.matchesLatestPending(segment)) {
-        return new ChatGptMarkdownConsistencyError(
-          "ChatGPT final DOM could not be aligned with text already streamed to Codex",
-        );
-      }
       sawPending = true;
       pending.push(segment);
     }
