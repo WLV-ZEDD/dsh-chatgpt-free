@@ -1,0 +1,10 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+Thumbs.db
+storageState.json
+storageState.*.json
+.dsh/
+*.tsbuildinfo
+launcher/

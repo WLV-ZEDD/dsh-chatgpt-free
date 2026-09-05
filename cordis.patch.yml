@@ -1,0 +1,4 @@
+# dsh-chatgpt-free bundle patch: inserts the sidecar plugin into a profile layer stack.
+- insert:
+    - id: dsh-chatgpt-free
+      name: '@wlv-zedd/dsh-chatgpt-free'
