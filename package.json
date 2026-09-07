@@ -26,6 +26,7 @@
     "src",
     "assets",
     "cordis.patch.yml",
+    "screenshots.json",
     "README.md",
     "LICENSE"
   ],
