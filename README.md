@@ -1,4 +1,6 @@
-# dsh-chatgpt-free
+﻿# dsh-chatgpt-free
+
+[English](https://github.com/WLV-ZEDD/dsh-chatgpt-free#readme) | [中文](https://github.com/WLV-ZEDD/dsh-chatgpt-free/blob/main/docs/README.zh-CN.md)
 
 [![npm version](https://img.shields.io/npm/v/@wlv-zedd/dsh-chatgpt-free.svg?style=flat&color=3b82f6)](https://www.npmjs.com/package/@wlv-zedd/dsh-chatgpt-free)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/WLV-ZEDD/dsh-chatgpt-free/blob/main/LICENSE)
@@ -7,7 +9,11 @@
 
 > **Zero-cost conversational AI model provider for DeepSeek Harness powered by free ChatGPT Web (GPT 5.6 Luna).**
 
-![dsh-chatgpt-free Interactive Demo](assets/demo.gif)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/WLV-ZEDD/dsh-chatgpt-free/main/assets/promo-dshmarket-official.png?v=1.0.1" alt="dsh-chatgpt-free Official Banner" width="100%">
+</p>
+
+![dsh-chatgpt-free Interactive Demo](https://raw.githubusercontent.com/WLV-ZEDD/dsh-chatgpt-free/main/assets/demo.gif?v=1.0.1)
 
 ---
 
@@ -18,7 +24,7 @@
 It connects via headless or visible Chrome browser automation to `chatgpt.com`, streaming real-time Markdown responses, code solutions, explanations, and reasoning back to your DSH chats without consuming API credits.
 
 ### Why Pure Chat?
-Small conversational web models (like GPT 5.6 Luna) excel at explanations, dialogue, Q&A, brainstorming, code snippet generation, and side-assistant tasks. By running in **Pure Chat Mode**, the bridge eliminates prompt overhead, tool hallucinations, and syntax errors of autonomous 7-tool execution loops, providing a fast, rock-solid, zero-cost LLM provider.
+Small conversational web models (like GPT 5.6 Luna) excel at explanations, dialogue, Q&A, brainstorming, code snippet generation, and side-assistant tasks. By running in **Pure Chat Mode**, the bridge eliminates prompt overhead, tool hallucinations, and syntax errors of autonomous multi-tool execution loops, providing a fast, rock-solid, zero-cost LLM provider.
 
 ### Key Features
 - **100% Free ($0.00 Cost):** Uses your existing free ChatGPT Web session. No OpenAI API keys or credit cards needed.
@@ -125,8 +131,11 @@ Doctor result: ready
 
 ## Support & Community Perks
 
-- 💖 **Sponsor directly:** If you find this plugin helpful, consider sending a small tip via [PayPal](https://paypal.me/wlvzedd).
-- 🎁 **Get Free AI Credits:** Sign up on AgentRouter using [this link](https://agentrouter.org/register?aff=bIJf) with your GitHub account to receive up to $200 in free API credits for your DeepSeek and LLM workflows.
+[![Sponsor via PayPal](https://img.shields.io/badge/Sponsor-PayPal-0070ba?style=flat&logo=paypal&logoColor=white)](https://paypal.me/wlvzedd) If you find this plugin helpful, consider sponsoring.
+
+[![Free AI Credits on AgentRouter](https://img.shields.io/badge/Free%20AI%20Credits-%24200-ff6b35?style=flat&logoColor=white)](https://agentrouter.org/register?aff=bIJf) Sign up on AgentRouter with your GitHub account to receive up to **$200 in free API credits** for your DeepSeek and LLM workflows.
+
+[![Free AI Credits on Vyce AI](https://img.shields.io/badge/Free%20AI%20Credits-%2450-7c3aed?style=flat&logoColor=white)](https://vyceai.com/signup?ref=VYCE_BL6YAG) Sign up on Vyce AI to receive **$50 in free API credits** for ultra-fast LLM inference.
 
 ---
 
