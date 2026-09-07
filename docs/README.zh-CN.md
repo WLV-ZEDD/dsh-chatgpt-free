@@ -9,10 +9,6 @@
 
 > **基于免费 ChatGPT Web（GPT 5.6 Luna）驱动的 DeepSeek Harness 零成本对话 AI 模型提供者。**
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/WLV-ZEDD/dsh-chatgpt-free/main/assets/promo-dshmarket-official.png?v=1.0.2" alt="dsh-chatgpt-free 官方横幅" width="100%">
-</p>
-
 ![dsh-chatgpt-free 交互演示](https://raw.githubusercontent.com/WLV-ZEDD/dsh-chatgpt-free/main/assets/demo.gif?v=1.0.2)
 
 ---
@@ -133,9 +129,9 @@ Doctor result: ready
 
 [![Sponsor via PayPal](https://img.shields.io/badge/Sponsor-PayPal-0070ba?style=flat&logo=paypal&logoColor=white)](https://paypal.me/wlvzedd) 如果你觉得本插件对你有帮助，欢迎赞助支持。
 
-[![Free AI Credits on AgentRouter](https://img.shields.io/badge/Free%20AI%20Credits-%24200-ff6b35?style=flat&logoColor=white)](https://agentrouter.org/register?aff=bIJf) 使用 GitHub 注册 AgentRouter 即可领取最高 **$200 免费额度**，用于 LLM 工作流。
+[![Free AI Credits on AgentRouter](https://img.shields.io/badge/Free%20AI%20Credits-%24200-ff6b35?style=flat&logoColor=white)](https://agentrouter.org/register?aff=bIJf) GitHub 注册 AgentRouter 即可领取最高 **$200 免费额度**。
 
-[![Free AI Credits on Vyce AI](https://img.shields.io/badge/Free%20AI%20Credits-%2450-7c3aed?style=flat&logoColor=white)](https://vyceai.com/signup?ref=VYCE_BL6YAG) 注册 Vyce AI 即可领取 **$50 免费额度**，用于高速 LLM 推理工作流。
+[![Free AI Credits on Vyce AI](https://img.shields.io/badge/Free%20AI%20Credits-%2450-7c3aed?style=flat&logoColor=white)](https://vyceai.com/signup?ref=VYCE_BL6YAG) 注册 Vyce AI 即可领取 **$50 免费额度**。
 
 ---
 

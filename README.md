@@ -9,10 +9,6 @@
 
 > **Zero-cost conversational AI model provider for DeepSeek Harness powered by free ChatGPT Web (GPT 5.6 Luna).**
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/WLV-ZEDD/dsh-chatgpt-free/main/assets/promo-dshmarket-official.png?v=1.0.2" alt="dsh-chatgpt-free Official Banner" width="100%">
-</p>
-
 ![dsh-chatgpt-free Interactive Demo](https://raw.githubusercontent.com/WLV-ZEDD/dsh-chatgpt-free/main/assets/demo.gif?v=1.0.2)
 
 ---
@@ -133,9 +129,9 @@ Doctor result: ready
 
 [![Sponsor via PayPal](https://img.shields.io/badge/Sponsor-PayPal-0070ba?style=flat&logo=paypal&logoColor=white)](https://paypal.me/wlvzedd) If you find this plugin helpful, consider sponsoring.
 
-[![Free AI Credits on AgentRouter](https://img.shields.io/badge/Free%20AI%20Credits-%24200-ff6b35?style=flat&logoColor=white)](https://agentrouter.org/register?aff=bIJf) Sign up on AgentRouter with your GitHub account to receive up to **$200 in free API credits** for your DeepSeek and LLM workflows.
+[![Free AI Credits on AgentRouter](https://img.shields.io/badge/Free%20AI%20Credits-%24200-ff6b35?style=flat&logoColor=white)](https://agentrouter.org/register?aff=bIJf) Claim up to **$200 free API credits** on AgentRouter via GitHub.
 
-[![Free AI Credits on Vyce AI](https://img.shields.io/badge/Free%20AI%20Credits-%2450-7c3aed?style=flat&logoColor=white)](https://vyceai.com/signup?ref=VYCE_BL6YAG) Sign up on Vyce AI to receive **$50 in free API credits** for ultra-fast LLM inference.
+[![Free AI Credits on Vyce AI](https://img.shields.io/badge/Free%20AI%20Credits-%2450-7c3aed?style=flat&logoColor=white)](https://vyceai.com/signup?ref=VYCE_BL6YAG) Claim **$50 free API credits** on Vyce AI for fast LLM inference.
 
 ---
 
