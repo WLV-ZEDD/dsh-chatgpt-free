@@ -1,4 +1,4 @@
-﻿# dsh-chatgpt-free
+# dsh-chatgpt-free
 
 [English](https://github.com/WLV-ZEDD/dsh-chatgpt-free#readme) | [中文](https://github.com/WLV-ZEDD/dsh-chatgpt-free/blob/main/docs/README.zh-CN.md)
 
@@ -10,10 +10,10 @@
 > **Zero-cost conversational AI model provider for DeepSeek Harness powered by free ChatGPT Web (GPT 5.6 Luna).**
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/WLV-ZEDD/dsh-chatgpt-free/main/assets/promo-dshmarket-official.png?v=1.0.1" alt="dsh-chatgpt-free Official Banner" width="100%">
+  <img src="https://raw.githubusercontent.com/WLV-ZEDD/dsh-chatgpt-free/main/assets/promo-dshmarket-official.png?v=1.0.2" alt="dsh-chatgpt-free Official Banner" width="100%">
 </p>
 
-![dsh-chatgpt-free Interactive Demo](https://raw.githubusercontent.com/WLV-ZEDD/dsh-chatgpt-free/main/assets/demo.gif?v=1.0.1)
+![dsh-chatgpt-free Interactive Demo](https://raw.githubusercontent.com/WLV-ZEDD/dsh-chatgpt-free/main/assets/demo.gif?v=1.0.2)
 
 ---
 
