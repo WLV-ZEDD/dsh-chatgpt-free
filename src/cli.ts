@@ -31,23 +31,23 @@ import { getTunnelServiceStatus, restartTunnelService, startTunnelService, stopT
 import { VERSION } from "./version";
 import { runDevCommand } from "./dev-chat/cli";
 
-const HELP = `dsh-chatgpt-free ${VERSION}
+const HELP = `dsh-chatgpt-web ${VERSION}
 
 DeepSeek Harness bridge & Cordis plugin for free ChatGPT Web (GPT 5.6 Luna) pure chat and zero API fees.
 
 Usage:
-  dsh-chatgpt-free setup [options]
-  dsh-chatgpt-free login
-  dsh-chatgpt-free doctor [--json]
-  dsh-chatgpt-free serve
-  dsh-chatgpt-free browser check
-  dsh-chatgpt-free uninstall --yes
+  dsh-chatgpt-web setup [options]
+  dsh-chatgpt-web login
+  dsh-chatgpt-web doctor [--json]
+  dsh-chatgpt-web serve
+  dsh-chatgpt-web browser check
+  dsh-chatgpt-web uninstall --yes
 
 Options:
   --host HOST                  Host to bind (default: 127.0.0.1)
   --port PORT                  Port to listen on (default: 17841)
   --chrome PATH                Path to Chrome/Chromium executable
-  --home PATH                  Override config storage path (default: ~/.dsh/storages/chatgpt-free)
+  --home PATH                  Override config storage path (default: ~/.dsh/storages/chatgpt-web)
   --login                      Trigger interactive browser login
   -h, --help                   Show this help message
   -v, --version                Show version
@@ -546,7 +546,7 @@ async function main(): Promise<void> {
     assertNoArgs(args);
     const config = loadConfig();
     const server = startServer(config);
-    stdout.write(`dsh-chatgpt-free ${VERSION} listening on http://${config.host}:${server.port}/v1 (${config.mode})\n`);
+    stdout.write(`dsh-chatgpt-web ${VERSION} listening on http://${config.host}:${server.port}/v1 (${config.mode})\n`);
     await new Promise<void>(() => {});
   } else if (command === "dev") await runDevCommand(args);
   else if (command === "mcp") await runChatGptMcpMain(args);
@@ -563,6 +563,6 @@ async function main(): Promise<void> {
 }
 
 main().catch(error => {
-  process.stderr.write(`dsh-chatgpt-free: ${error instanceof Error ? error.message : String(error)}\n`);
+  process.stderr.write(`dsh-chatgpt-web: ${error instanceof Error ? error.message : String(error)}\n`);
   process.exitCode = 1;
 });

@@ -99,7 +99,7 @@ function streamFailureEvidence(
 }
 
 const reportHttpStreamFailure: HttpStreamFailureReporter = evidence => {
-  console.warn(`[dsh-chatgpt-free] http_stream_failed ${JSON.stringify(evidence)}`);
+  console.warn(`[dsh-chatgpt-web] http_stream_failed ${JSON.stringify(evidence)}`);
 };
 
 function emitHttpStreamFailure(
@@ -829,7 +829,7 @@ export function startServer(
     if (req.method === "GET" && url.pathname === "/healthz") {
       return Response.json({
         status: "ok",
-        service: "dsh-chatgpt-free",
+        service: "dsh-chatgpt-web",
         version: VERSION,
         mode: config.mode,
         pid: process.pid,
@@ -970,7 +970,7 @@ export function startServer(
         return formatErrorResponse(
           503,
           "server_error",
-          "dsh-chatgpt-free is draining for a requested service operation",
+          "dsh-chatgpt-web is draining for a requested service operation",
         );
       }
       return httpTurns.track(async signal => {
@@ -1007,7 +1007,7 @@ export function startServer(
       });
     }
     if (req.method === "POST" && url.pathname === "/v1/responses") {
-      if (draining) return formatErrorResponse(503, "server_error", "dsh-chatgpt-free is draining for a requested service operation");
+      if (draining) return formatErrorResponse(503, "server_error", "dsh-chatgpt-web is draining for a requested service operation");
       return httpTurns.track(
         (signal, bindIdentity) => responseRequest(
           new Request(req, { signal }),
@@ -1021,7 +1021,7 @@ export function startServer(
       );
     }
     if (req.method === "POST" && url.pathname === "/v1/responses/compact") {
-      if (draining) return formatErrorResponse(503, "server_error", "dsh-chatgpt-free is draining for a requested service operation");
+      if (draining) return formatErrorResponse(503, "server_error", "dsh-chatgpt-web is draining for a requested service operation");
       return httpTurns.track(
         (signal, bindIdentity) => compactRequest(
           new Request(req, { signal }),
@@ -1035,7 +1035,7 @@ export function startServer(
       );
     }
     if (req.method === "POST" && url.pathname === "/v1/alpha/search") {
-      if (draining) return formatErrorResponse(503, "server_error", "dsh-chatgpt-free is draining for a requested service operation");
+      if (draining) return formatErrorResponse(503, "server_error", "dsh-chatgpt-web is draining for a requested service operation");
       return httpTurns.track(
         signal => nativeSearchRequest(new Request(req, { signal }), dependencies.fetchUpstream),
         req.signal,
@@ -1096,13 +1096,13 @@ export function startServer(
       if (failures.length > 0) {
         process.exitCode = 1;
         for (const failure of failures) {
-          console.error(`[dsh-chatgpt-free] shutdown cleanup failed: ${failure instanceof Error ? failure.message : String(failure)}`);
+          console.error(`[dsh-chatgpt-web] shutdown cleanup failed: ${failure instanceof Error ? failure.message : String(failure)}`);
         }
       }
       await server.stop(true);
     })().catch(error => {
       process.exitCode = 1;
-      console.error(`[dsh-chatgpt-free] server shutdown failed: ${error instanceof Error ? error.message : String(error)}`);
+      console.error(`[dsh-chatgpt-web] server shutdown failed: ${error instanceof Error ? error.message : String(error)}`);
     });
   }
   process.once("SIGINT", shutdown);

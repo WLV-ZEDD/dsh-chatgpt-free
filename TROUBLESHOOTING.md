@@ -1,13 +1,13 @@
-# Troubleshooting dsh-chatgpt-free
+# Troubleshooting dsh-chatgpt-web
 
-This guide covers common issues and resolutions when running `@wlv-zedd/dsh-chatgpt-free` in DeepSeek Harness.
+This guide covers common issues and resolutions when running `@wlv-zedd/dsh-chatgpt-web` in DeepSeek Harness.
 
 ## Quick Diagnostics
 
 Before modifying configuration, run the built-in diagnostic doctor:
 
 ```bash
-dsh-chatgpt-free doctor
+dsh-chatgpt-web doctor
 ```
 
 This inspects:
@@ -24,7 +24,7 @@ This inspects:
 **Solution:**
 Run the interactive browser login:
 ```bash
-dsh-chatgpt-free login
+dsh-chatgpt-web login
 ```
 A browser window will open. Log into your OpenAI / ChatGPT account (Free or Plus/Team). Once the ChatGPT composer loads, the session cookies are safely saved to `~/.dsh/storages/chatgpt-free/`.
 
@@ -35,12 +35,12 @@ A browser window will open. Log into your OpenAI / ChatGPT account (Free or Plus
 **Solution:**
 Identify and terminate any lingering instance, or run `doctor` to see if the running service is already healthy. If you need a custom port, configure it via:
 ```bash
-dsh-chatgpt-free serve --port 17842
+dsh-chatgpt-web serve --port 17842
 ```
 or in `cordis.yml`:
 ```yaml
 plugins:
-  "@wlv-zedd/dsh-chatgpt-free":
+  "@wlv-zedd/dsh-chatgpt-web":
     port: 17842
 ```
 
@@ -51,7 +51,7 @@ plugins:
 **Solution:**
 Specify your browser executable path explicitly:
 ```bash
-dsh-chatgpt-free setup --browser-executable "C:\Program Files\Google\Chrome\Application\chrome.exe"
+dsh-chatgpt-web setup --browser-executable "C:\Program Files\Google\Chrome\Application\chrome.exe"
 ```
 
 ---
@@ -60,15 +60,15 @@ dsh-chatgpt-free setup --browser-executable "C:\Program Files\Google\Chrome\Appl
 **Cause:** High frequency of requests in a short time frame or ChatGPT anti-bot challenge.
 **Solution:**
 - Wait a couple of minutes for Cloudflare challenges to settle.
-- Run `dsh-chatgpt-free login` to solve any visual verification prompt directly in the visible browser if required.
+- Run `dsh-chatgpt-web login` to solve any visual verification prompt directly in the visible browser if required.
 
 ### 5. Stream Disconnected or Browser Response Interrupted
 **Cause:** ChatGPT web page refreshed, network connection dropped, or the Chrome browser process was closed.
 **Solution:**
 - Check that your internet connection is active and `chatgpt.com` is accessible.
 - Verify that Chrome is open and logged in.
-- Run `npx @wlv-zedd/dsh-chatgpt-free doctor` to check proxy and session status.
-- Restart the daemon if needed: `npx @wlv-zedd/dsh-chatgpt-free serve`.
+- Run `npx @wlv-zedd/dsh-chatgpt-web doctor` to check proxy and session status.
+- Restart the daemon if needed: `npx @wlv-zedd/dsh-chatgpt-web serve`.
 
 ### 6. ChatGPT Rate Limits (HTTP 429)
 **Cause:** Hourly prompt limit reached on the ChatGPT Free tier.
@@ -79,14 +79,14 @@ dsh-chatgpt-free setup --browser-executable "C:\Program Files\Google\Chrome\Appl
 
 ## Update and Uninstall
 
-To update `dsh-chatgpt-free`, pull the latest changes and rebuild:
+To update `dsh-chatgpt-web`, pull the latest changes and rebuild:
 ```bash
 bun install
 bun run build
 ```
 
-To remove or disable `dsh-chatgpt-free` in DeepSeek Harness:
-1. Remove `@wlv-zedd/dsh-chatgpt-free` from your profile's `cordis.patch.yml` or `cordis.yml`.
+To remove or disable `dsh-chatgpt-web` in DeepSeek Harness:
+1. Remove `@wlv-zedd/dsh-chatgpt-web` from your profile's `cordis.patch.yml` or `cordis.yml`.
 2. Delete saved browser session data if desired:
    - On Windows: `%USERPROFILE%\.dsh\storages\chatgpt-free\`
    - On macOS/Linux: `~/.dsh/storages/chatgpt-free/`
@@ -97,7 +97,7 @@ When opening an issue or bug report on GitHub:
 - Specify your OS and architecture (e.g., Windows 11 x64, macOS arm64, Linux x64).
 - ChatGPT account tier (Free Tier Luna or Plus/Team).
 - Node.js and Bun versions.
-- Output from `npx @wlv-zedd/dsh-chatgpt-free doctor`.
+- Output from `npx @wlv-zedd/dsh-chatgpt-web doctor`.
 - Clear reproduction steps and console error traces.
 
 Before sharing logs or screenshots, ensure all personal session cookies, authentication tokens, and private prompts are redacted.

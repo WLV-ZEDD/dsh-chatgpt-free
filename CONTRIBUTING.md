@@ -1,6 +1,6 @@
-# Contributing to dsh-chatgpt-free
+# Contributing to dsh-chatgpt-web
 
-Contributions to `dsh-chatgpt-free` are welcome! This plugin provides a zero-cost, browser-backed Pure Chat bridge connecting ChatGPT Web models directly into the DeepSeek Harness ecosystem.
+Contributions to `dsh-chatgpt-web` are welcome! This plugin provides a zero-cost, browser-backed Pure Chat bridge connecting ChatGPT Web models directly into the DeepSeek Harness ecosystem.
 
 ## Guidelines
 

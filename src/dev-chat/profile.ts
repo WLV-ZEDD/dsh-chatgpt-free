@@ -46,12 +46,12 @@ export function resolveDevProfilePaths({
 } = {}): DevProfilePaths {
   const home = resolve(expandUserPath(
     environment.DSH_CHATGPT_FREE_DEV_HOME?.trim()
-      || join(homeDirectory, ".dsh", "storages", "chatgpt-free-dev"),
+      || join(homeDirectory, ".dsh", "storages", "chatgpt-web-dev"),
   ));
   const productionHome = resolve(expandUserPath(
     environment.DSH_CHATGPT_FREE_HOME?.trim()
       || environment.DSH_CHATGPT_WEB_HOME?.trim()
-      || join(homeDirectory, ".dsh", "storages", "chatgpt-free"),
+      || join(homeDirectory, ".dsh", "storages", "chatgpt-web"),
   ));
   if (home === productionHome) {
     throw new Error("DEV profile home must differ from the production home");

@@ -1,21 +1,21 @@
-# dsh-chatgpt-free
+# dsh-chatgpt-web
 
-[English](https://github.com/WLV-ZEDD/dsh-chatgpt-free#readme) | [中文](https://github.com/WLV-ZEDD/dsh-chatgpt-free/blob/main/docs/README.zh-CN.md)
+[English](https://github.com/WLV-ZEDD/dsh-chatgpt-web#readme) | [中文](https://github.com/WLV-ZEDD/dsh-chatgpt-web/blob/main/docs/README.zh-CN.md)
 
-[![npm version](https://img.shields.io/npm/v/@wlv-zedd/dsh-chatgpt-free.svg?style=flat&color=3b82f6)](https://www.npmjs.com/package/@wlv-zedd/dsh-chatgpt-free)
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/WLV-ZEDD/dsh-chatgpt-free/blob/main/LICENSE)
+[![npm version](https://img.shields.io/npm/v/@wlv-zedd/dsh-chatgpt-web.svg?style=flat&color=3b82f6)](https://www.npmjs.com/package/@wlv-zedd/dsh-chatgpt-web)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/WLV-ZEDD/dsh-chatgpt-web/blob/main/LICENSE)
 [![DeepSeek Harness](https://img.shields.io/badge/DeepSeek%20Harness-Cordis%20Plugin-0078d4)](https://github.com/deepseek-ai/deepseek-harness)
-[![Mode](https://img.shields.io/badge/Mode-Pure%20Chat%20%26%20Markdown-success)](https://github.com/WLV-ZEDD/dsh-chatgpt-free)
+[![Mode](https://img.shields.io/badge/Mode-Pure%20Chat%20%26%20Markdown-success)](https://github.com/WLV-ZEDD/dsh-chatgpt-web)
 
 > **基于免费 ChatGPT Web（GPT 5.6 Luna）驱动的 DeepSeek Harness 零成本对话 AI 模型提供者。**
 
-![dsh-chatgpt-free 交互演示](https://raw.githubusercontent.com/WLV-ZEDD/dsh-chatgpt-free/main/assets/demo.gif?v=1.0.2)
+![dsh-chatgpt-web 交互演示](https://raw.githubusercontent.com/WLV-ZEDD/dsh-chatgpt-web/main/assets/demo.gif?v=1.0.0)
 
 ---
 
 ## 概述
 
-**dsh-chatgpt-free** 将你本地的 ChatGPT 浏览器会话转变为 DeepSeek Harness (DSH) 内部无缝运行的 **$0.00 免 API 费用的对话模型提供者**。
+**dsh-chatgpt-web** 将你本地的 ChatGPT 浏览器会话转变为 DeepSeek Harness (DSH) 内部无缝运行的 **$0.00 免 API 费用的对话模型提供者**。
 
 它通过无头（Headless）或可视 Chrome 浏览器自动化连接至 `chatgpt.com`，将实时的 Markdown 回答、代码方案、解释以及推理过程直接流式传输回 DSH 对话中，无需消耗任何 API 额度。
 
@@ -36,10 +36,10 @@
 
 ### 1. 安装插件
 
-在你的 DeepSeek Harness 环境或配置文件中安装 `@wlv-zedd/dsh-chatgpt-free`：
+在你的 DeepSeek Harness 环境或配置文件中安装 `@wlv-zedd/dsh-chatgpt-web`：
 
 ```bash
-pnpm add @wlv-zedd/dsh-chatgpt-free
+pnpm add @wlv-zedd/dsh-chatgpt-web
 ```
 
 ### 2. 一次性浏览器登录
@@ -47,7 +47,7 @@ pnpm add @wlv-zedd/dsh-chatgpt-free
 进行一次性的 ChatGPT 账号登录验证：
 
 ```bash
-npx @wlv-zedd/dsh-chatgpt-free login
+npx @wlv-zedd/dsh-chatgpt-web login
 ```
 
 系统将打开专用的 Chrome 窗口。登录你的 OpenAI / ChatGPT 账号。一旦看到 ChatGPT 输入框，浏览器会话凭证将安全保存在本地的 `~/.dsh/storages/chatgpt-free/` 目录中。
@@ -83,8 +83,8 @@ agent-default-model:
 
 ```yaml
 - insert:
-    - id: dsh-chatgpt-free
-      name: '@wlv-zedd/dsh-chatgpt-free'
+    - id: dsh-chatgpt-web
+      name: '@wlv-zedd/dsh-chatgpt-web'
 ```
 
 现在启动 DeepSeek Harness：
@@ -102,7 +102,7 @@ DSH 将自动启动后台 Sidecar 进程，连接已登录的 ChatGPT 会话并�
 随时使用内置的诊断工具检查环境配置：
 
 ```bash
-npx @wlv-zedd/dsh-chatgpt-free doctor
+npx @wlv-zedd/dsh-chatgpt-web doctor
 ```
 
 正常输出示例：

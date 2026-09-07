@@ -154,7 +154,7 @@ export function expandUserPath(value: string): string {
 export function getConfigDir(): string {
   const configured = (process.env.DSH_CHATGPT_FREE_HOME || process.env.DSH_CHATGPT_WEB_HOME)?.trim();
   if (configured) return resolve(expandUserPath(configured));
-  const dshStorage = join(homedir(), ".dsh", "storages", "chatgpt-free");
+  const dshStorage = join(homedir(), ".dsh", "storages", "chatgpt-web");
   const legacyDshStorage = join(homedir(), ".dsh", "storages", "chatgpt-web");
   const legacyStorage = join(homedir(), ".codex-chatgpt-web");
   if (!existsSync(dshStorage)) {
@@ -175,7 +175,7 @@ export function isWindowsPipeEndpoint(value: string): boolean {
 export function defaultBrokerEndpoint(home = getConfigDir(), platform = process.platform): string {
   if (platform !== "win32") return join(home, "runtime", "turn-broker.sock");
   const identity = createHash("sha256").update(resolve(home).toLowerCase()).digest("hex").slice(0, 20);
-  return `\\\\.\\pipe\\dsh-chatgpt-free-${identity}`;
+  return `\\\\.\\pipe\\dsh-chatgpt-web-${identity}`;
 }
 
 export function resolveBrokerEndpoint(value: string): string {
@@ -375,13 +375,13 @@ export function defaultChromeExecutable(
 
 export function loadConfig(): AppConfig {
   const path = getConfigPath();
-  if (!existsSync(path)) throw new Error(`Configuration is missing: ${path}. Run dsh-chatgpt-free setup first.`);
+  if (!existsSync(path)) throw new Error(`Configuration is missing: ${path}. Run dsh-chatgpt-web setup first.`);
   return parseConfig(JSON.parse(stripUtf8Bom(readFileSync(path, "utf8"))), path);
 }
 
 export function loadConfigForSetup(): AppConfig {
   const path = getConfigPath();
-  if (!existsSync(path)) throw new Error(`Configuration is missing: ${path}. Run dsh-chatgpt-free setup first.`);
+  if (!existsSync(path)) throw new Error(`Configuration is missing: ${path}. Run dsh-chatgpt-web setup first.`);
   const raw = JSON.parse(stripUtf8Bom(readFileSync(path, "utf8"))) as Record<string, unknown>;
   if (raw.version === 1 && raw.mode === "pro-only") {
     raw.version = 2;

@@ -1,21 +1,21 @@
-# dsh-chatgpt-free
+# dsh-chatgpt-web
 
-[English](https://github.com/WLV-ZEDD/dsh-chatgpt-free#readme) | [中文](https://github.com/WLV-ZEDD/dsh-chatgpt-free/blob/main/docs/README.zh-CN.md)
+[English](https://github.com/WLV-ZEDD/dsh-chatgpt-web#readme) | [中文](https://github.com/WLV-ZEDD/dsh-chatgpt-web/blob/main/docs/README.zh-CN.md)
 
-[![npm version](https://img.shields.io/npm/v/@wlv-zedd/dsh-chatgpt-free.svg?style=flat&color=3b82f6)](https://www.npmjs.com/package/@wlv-zedd/dsh-chatgpt-free)
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/WLV-ZEDD/dsh-chatgpt-free/blob/main/LICENSE)
+[![npm version](https://img.shields.io/npm/v/@wlv-zedd/dsh-chatgpt-web.svg?style=flat&color=3b82f6)](https://www.npmjs.com/package/@wlv-zedd/dsh-chatgpt-web)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/WLV-ZEDD/dsh-chatgpt-web/blob/main/LICENSE)
 [![DeepSeek Harness](https://img.shields.io/badge/DeepSeek%20Harness-Cordis%20Plugin-0078d4)](https://github.com/deepseek-ai/deepseek-harness)
-[![Mode](https://img.shields.io/badge/Mode-Pure%20Chat%20%26%20Markdown-success)](https://github.com/WLV-ZEDD/dsh-chatgpt-free)
+[![Mode](https://img.shields.io/badge/Mode-Pure%20Chat%20%26%20Markdown-success)](https://github.com/WLV-ZEDD/dsh-chatgpt-web)
 
 > **Zero-cost conversational AI model provider for DeepSeek Harness powered by free ChatGPT Web (GPT 5.6 Luna).**
 
-![dsh-chatgpt-free Interactive Demo](https://raw.githubusercontent.com/WLV-ZEDD/dsh-chatgpt-free/main/assets/demo.gif?v=1.0.2)
+![dsh-chatgpt-web Interactive Demo](https://raw.githubusercontent.com/WLV-ZEDD/dsh-chatgpt-web/main/assets/demo.gif?v=1.0.0)
 
 ---
 
 ## Overview
 
-**dsh-chatgpt-free** turns your local browser session of ChatGPT into a seamless, **$0.00 API-free conversational model provider** directly inside DeepSeek Harness (DSH).
+**dsh-chatgpt-web** turns your local browser session of ChatGPT into a seamless, **$0.00 API-free conversational model provider** directly inside DeepSeek Harness (DSH).
 
 It connects via headless or visible Chrome browser automation to `chatgpt.com`, streaming real-time Markdown responses, code solutions, explanations, and reasoning back to your DSH chats without consuming API credits.
 
@@ -36,10 +36,10 @@ Small conversational web models (like GPT 5.6 Luna) excel at explanations, dialo
 
 ### 1. Installation
 
-Install `@wlv-zedd/dsh-chatgpt-free` in your DeepSeek Harness environment or profile:
+Install `@wlv-zedd/dsh-chatgpt-web` in your DeepSeek Harness environment or profile:
 
 ```bash
-pnpm add @wlv-zedd/dsh-chatgpt-free
+pnpm add @wlv-zedd/dsh-chatgpt-web
 ```
 
 ### 2. One-Time Browser Sign-In
@@ -47,7 +47,7 @@ pnpm add @wlv-zedd/dsh-chatgpt-free
 Authenticate your ChatGPT account once:
 
 ```bash
-npx @wlv-zedd/dsh-chatgpt-free login
+npx @wlv-zedd/dsh-chatgpt-web login
 ```
 
 A dedicated Chrome window will open. Log into your OpenAI / ChatGPT account. Once the ChatGPT composer is visible, the browser session is safely and securely saved locally to `~/.dsh/storages/chatgpt-free/`.
@@ -83,8 +83,8 @@ And add the sidecar plugin to your profile's `cordis.patch.yml` (or `cordis.yml`
 
 ```yaml
 - insert:
-    - id: dsh-chatgpt-free
-      name: '@wlv-zedd/dsh-chatgpt-free'
+    - id: dsh-chatgpt-web
+      name: '@wlv-zedd/dsh-chatgpt-web'
 ```
 
 Now start DeepSeek Harness:
@@ -102,7 +102,7 @@ DSH will automatically start the background sidecar process, connect to your aut
 Verify your setup at any time with the built-in diagnostic doctor:
 
 ```bash
-npx @wlv-zedd/dsh-chatgpt-free doctor
+npx @wlv-zedd/dsh-chatgpt-web doctor
 ```
 
 Example healthy output:
