@@ -1,6 +1,6 @@
 # dsh-chatgpt-web
 
-[English](https://github.com/WLV-ZEDD/dsh-chatgpt-web#readme) | [中文](https://github.com/WLV-ZEDD/dsh-chatgpt-web/blob/main/docs/README.zh-CN.md)
+[English](https://github.com/WLV-ZEDD/dsh-chatgpt-web#readme) | [中文](./README.zh-CN.md)
 
 [![npm version](https://img.shields.io/npm/v/@wlv-zedd/dsh-chatgpt-web.svg?style=flat&color=3b82f6)](https://www.npmjs.com/package/@wlv-zedd/dsh-chatgpt-web)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/WLV-ZEDD/dsh-chatgpt-web/blob/main/LICENSE)
@@ -50,7 +50,7 @@ Authenticate your ChatGPT account once:
 npx @wlv-zedd/dsh-chatgpt-web login
 ```
 
-A dedicated Chrome window will open. Log into your OpenAI / ChatGPT account. Once the ChatGPT composer is visible, the browser session is safely and securely saved locally to `~/.dsh/storages/chatgpt-free/`.
+A dedicated Chrome window will open. Log into your OpenAI / ChatGPT account. Once the ChatGPT composer is visible, the browser session is safely and securely saved locally to `~/.dsh/storages/chatgpt-web/`.
 
 ### 3. Enable in DeepSeek Harness
 
@@ -107,7 +107,7 @@ npx @wlv-zedd/dsh-chatgpt-web doctor
 
 Example healthy output:
 ```text
-✓ Configuration is valid (~/.dsh/storages/chatgpt-free/config.json)
+✓ Configuration is valid (~/.dsh/storages/chatgpt-web/config.json)
 ✓ Chrome executable found: C:\Program Files\Google\Chrome\Application\chrome.exe
 ✓ ChatGPT login state has authenticated browser evidence
 ✓ Responses proxy is healthy on 127.0.0.1:17841

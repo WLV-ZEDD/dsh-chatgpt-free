@@ -8,3 +8,4 @@ storageState.*.json
 .dsh/
 *.tsbuildinfo
 launcher/
+graphify-out/

@@ -26,7 +26,7 @@ Run the interactive browser login:
 ```bash
 dsh-chatgpt-web login
 ```
-A browser window will open. Log into your OpenAI / ChatGPT account (Free or Plus/Team). Once the ChatGPT composer loads, the session cookies are safely saved to `~/.dsh/storages/chatgpt-free/`.
+A browser window will open. Log into your OpenAI / ChatGPT account (Free or Plus/Team). Once the ChatGPT composer loads, the session cookies are safely saved to `~/.dsh/storages/chatgpt-web/`.
 
 ---
 
@@ -88,8 +88,8 @@ bun run build
 To remove or disable `dsh-chatgpt-web` in DeepSeek Harness:
 1. Remove `@wlv-zedd/dsh-chatgpt-web` from your profile's `cordis.patch.yml` or `cordis.yml`.
 2. Delete saved browser session data if desired:
-   - On Windows: `%USERPROFILE%\.dsh\storages\chatgpt-free\`
-   - On macOS/Linux: `~/.dsh/storages/chatgpt-free/`
+   - On Windows: `%USERPROFILE%\.dsh\storages\chatgpt-web\`
+   - On macOS/Linux: `~/.dsh/storages/chatgpt-web/`
 
 ## Submitting Bug Reports
 

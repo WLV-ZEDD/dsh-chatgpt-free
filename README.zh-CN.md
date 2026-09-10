@@ -1,6 +1,6 @@
 # dsh-chatgpt-web
 
-[English](https://github.com/WLV-ZEDD/dsh-chatgpt-web#readme) | [中文](https://github.com/WLV-ZEDD/dsh-chatgpt-web/blob/main/docs/README.zh-CN.md)
+[English](./README.md) | [中文](./README.zh-CN.md)
 
 [![npm version](https://img.shields.io/npm/v/@wlv-zedd/dsh-chatgpt-web.svg?style=flat&color=3b82f6)](https://www.npmjs.com/package/@wlv-zedd/dsh-chatgpt-web)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/WLV-ZEDD/dsh-chatgpt-web/blob/main/LICENSE)
@@ -50,7 +50,7 @@ pnpm add @wlv-zedd/dsh-chatgpt-web
 npx @wlv-zedd/dsh-chatgpt-web login
 ```
 
-系统将打开专用的 Chrome 窗口。登录你的 OpenAI / ChatGPT 账号。一旦看到 ChatGPT 输入框，浏览器会话凭证将安全保存在本地的 `~/.dsh/storages/chatgpt-free/` 目录中。
+系统将打开专用的 Chrome 窗口。登录你的 OpenAI / ChatGPT 账号。一旦看到 ChatGPT 输入框，浏览器会话凭证将安全保存在本地的 `~/.dsh/storages/chatgpt-web/` 目录中。
 
 ### 3. 在 DeepSeek Harness 中启用
 
@@ -107,7 +107,7 @@ npx @wlv-zedd/dsh-chatgpt-web doctor
 
 正常输出示例：
 ```text
-✓ Configuration is valid (~/.dsh/storages/chatgpt-free/config.json)
+✓ Configuration is valid (~/.dsh/storages/chatgpt-web/config.json)
 ✓ Chrome executable found: C:\Program Files\Google\Chrome\Application\chrome.exe
 ✓ ChatGPT login state has authenticated browser evidence
 ✓ Responses proxy is healthy on 127.0.0.1:17841

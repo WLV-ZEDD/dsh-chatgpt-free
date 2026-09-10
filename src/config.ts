@@ -155,7 +155,7 @@ export function getConfigDir(): string {
   const configured = (process.env.DSH_CHATGPT_FREE_HOME || process.env.DSH_CHATGPT_WEB_HOME)?.trim();
   if (configured) return resolve(expandUserPath(configured));
   const dshStorage = join(homedir(), ".dsh", "storages", "chatgpt-web");
-  const legacyDshStorage = join(homedir(), ".dsh", "storages", "chatgpt-web");
+  const legacyDshStorage = join(homedir(), ".dsh", "storages", "chatgpt-free");
   const legacyStorage = join(homedir(), ".codex-chatgpt-web");
   if (!existsSync(dshStorage)) {
     if (existsSync(legacyDshStorage)) return resolve(legacyDshStorage);
