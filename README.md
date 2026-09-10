@@ -3,11 +3,16 @@
 [English](https://github.com/WLV-ZEDD/dsh-chatgpt-web#readme) | [中文](./README.zh-CN.md)
 
 [![npm version](https://img.shields.io/npm/v/@wlv-zedd/dsh-chatgpt-web.svg?style=flat&color=3b82f6)](https://www.npmjs.com/package/@wlv-zedd/dsh-chatgpt-web)
+[![dsh-market](https://img.shields.io/badge/dsh--market-available-c0392b?style=flat)](https://dshmarket.com/p/WLV-ZEDD/dsh-chatgpt-web/)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/WLV-ZEDD/dsh-chatgpt-web/blob/main/LICENSE)
 [![DeepSeek Harness](https://img.shields.io/badge/DeepSeek%20Harness-Cordis%20Plugin-0078d4)](https://github.com/deepseek-ai/deepseek-harness)
 [![Mode](https://img.shields.io/badge/Mode-Pure%20Chat%20%26%20Markdown-success)](https://github.com/WLV-ZEDD/dsh-chatgpt-web)
 
 > **Zero-cost conversational AI model provider for DeepSeek Harness powered by free ChatGPT Web (GPT 5.6 Luna).**
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/WLV-ZEDD/dsh-chatgpt-web/main/assets/promo-dshmarket-official.png?v=1.0.2" alt="dsh-chatgpt-web on DSH Market" width="100%">
+</p>
 
 ![dsh-chatgpt-web Interactive Demo](https://raw.githubusercontent.com/WLV-ZEDD/dsh-chatgpt-web/main/assets/demo.gif?v=1.0.0)
 
