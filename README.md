@@ -14,7 +14,9 @@
   <img src="https://raw.githubusercontent.com/WLV-ZEDD/dsh-chatgpt-web/main/assets/promo-dshmarket-official.png?v=1.0.2" alt="dsh-chatgpt-web on DSH Market" width="100%">
 </p>
 
-![dsh-chatgpt-web Interactive Demo](https://raw.githubusercontent.com/WLV-ZEDD/dsh-chatgpt-web/main/assets/demo.gif?v=1.0.0)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/WLV-ZEDD/dsh-chatgpt-web/main/assets/demo.gif?v=1.0.0" alt="dsh-chatgpt-web Interactive Demo" width="100%">
+</p>
 
 ---
 
